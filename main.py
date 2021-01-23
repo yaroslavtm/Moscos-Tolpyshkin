@@ -15,12 +15,12 @@ class Example(QMainWindow):
         self.update()
 
     def paintEvent(self, event):
-        self.qp = QPainter()
-        self.qp.begin(self)
+        self.b = QPainter()
+        self.b.begin(self)
         a = random.randint(10, 250)
-        self.qp.setPen(QColor(255, 255, 0))
-        self.qp.drawEllipse(0, 0, a, a)
-        self.qp.end()
+        self.b.setPen(QColor(255, 255, 0))
+        self.b.drawEllipse(0, 0, a, a)
+        self.b.end()
 
 app = QApplication(sys.argv)
 ex = Example()
